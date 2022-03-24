@@ -1,0 +1,31 @@
+{
+  "name": "discord-ERP-merlin-bot",
+  "version": "1.0.0",
+  "description": "This is your description of your django project .. this is your demo web site link: [your official website](https://google.com)",
+  "main": "bundle.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github01main/gjaklsd-2312312.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/github01main/gjaklsd-2312312/issues"
+  },
+  "homepage": "https://github.com/github01main/gjaklsd-2312312#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "uuid": "^8.3.2"
+  }
+}

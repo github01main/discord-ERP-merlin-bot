@@ -1,0 +1,6 @@
+{% extends 'main.html' %} {% comment %} main.html에 확장. {% endcomment %}
+{% block content %}
+{% comment %} 함수에서 요청받은 document의 이름값을 부여한다. {% endcomment %}
+<h1>{{document.name}}</h1>
+
+{% endblock content %}

@@ -1,0 +1,33 @@
+# 가상환경 리스트.
+
+Pipfile
+
+# 특정 제외.
+*.ps1
+*.sh
+*.txt
+*.lock
+
+# 제외 폴더.
+migrations/
+__pycache__/
+venv/
+
+# 제외 파일.
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### Windows ###
+[Dd]esktop.ini
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk

@@ -1,0 +1,45 @@
+
+@charset "UTF-8";
+
+/* 멀린 로고 default css */
+.merlin_logo{
+  /* 
+    default logo : effects
+  */
+  width            : 128px;
+  height           : 128px;
+  margin           : 15px;
+  background-color : white;
+  border-radius    :25%;
+  box-shadow       : 0 1px 1px rgba(0,0,0,0.11), 
+                     0 2px 2px rgba(0,0,0,0.11), 
+                     0 4px 4px rgba(0,0,0,0.11), 
+                     0 8px 8px rgba(0,0,0,0.11), 
+                     0 16px 16px rgba(0,0,0,0.11), 
+                     0 32px 32px rgba(0,0,0,0.11);
+
+  /* default : filtering */
+  filter           : none;
+  /* default : opacity */
+  opacity          : 1;
+  /* default : transition */
+  transition       : 0.2s ease;
+
+    /* 멀린 로고 hover css */
+  &:hover{
+    /* filtering */
+    -webkit-filter    : contrast(100%);
+    filter            : contrast(100%);
+    /* opacity */
+    opacity           : 0.25;
+    /* transform */
+    -webkit-transform : scale(1.05);
+    -ms-transform     : scale(1.05);
+    transform         : scale(1.05);
+    /* rotation */
+    -webkit-transform : rotateZ(-5deg);
+    -ms-transform     : rotateZ(-5deg);
+    transform         : rotateZ(-5deg);
+    transition        : all 0.2s ease;
+  }
+}
