@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',   
-    '__kimchi__.apps.KimchiConfig',
+    'django.contrib.staticfiles',           
+    'base.apps.BaseConfig',
 ]
 
 MIDDLEWARE = [

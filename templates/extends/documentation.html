@@ -1,0 +1,42 @@
+{% load static %}
+
+<div class="article cat0lit">
+    <a href="{% url 'createPost' %}">Create Topic</a>
+    <hr>
+    <div class="topic-container cat0lit">
+        <div class='divded-side-section cat0lit'>
+            <h3>Documents list</h3>
+            {# 토픽을 생성하는 url 링크이다.#}
+            {% comment %} <a href="{% url 'createPost' %}">Create Topic</a> {% endcomment %}
+            <hr>
+
+            <div class='divided-side-section-left-topics cat0lit'>
+                {# topic 이름을 불러온다. #}
+                <a class='cat0lit' href="/category/3/">All</a>
+            </div>
+
+            {% for topic in topics %}
+                <div class='divided-side-section-left-topics cat0lit'>
+                    {# topic 이름을 불러온다. #}
+                    <a class='cat0lit' href="?q={{topic.name}}">{{topic.name}}</a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class='divided-side-section cat0lit'>
+            {# 모든 포스트들을 나열한다. #}
+            {% for post in posts %}
+                <div class='divided-side-section-right-posted-list-section cat0lit'>
+                    @{{post.host.username}}
+                    {{post.topic}}
+                    <a class='cat0lit' href="{% url 'post' post.id %}">{{post.name}}</a>
+                        <div id='divided-side-section-right-posted-edit-section'>
+                            <a class='cat0lit' href="{% url 'updatePost' post.id %}">Edit</a>
+                            <a class='cat0lit' href="{% url 'deletePost' post.id %}">Delete</a>
+                        </div>
+                    <hr>
+                </div>
+            {% endfor%}
+        </div>
+    </div>
+</div>
+

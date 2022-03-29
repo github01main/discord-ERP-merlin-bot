@@ -2,27 +2,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!--#region  meta section -->   
+<!--#region  meta section -->
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% comment %} main.html에 설정된 script 변수값들을 하위 js 와 css에 적용시킨다. {% endcomment %}
     {% block extrahead %}
-    {% comment %} 
-    Merlin Bot Favicon 48x48 ico extention.
-    {% endcomment %}
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/icons/48x48_web_server_logo.ico' %}">
+    {% comment %} Merlin Bot Favicon 48x48 ico extention. {% endcomment %}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static "images/icons/48x48_web_server_logo.ico" %}">
     <script defer src="{% static 'js/bundle.js' %}" type="text/javascript"></script>
     {% endblock %}
-    <title>Discord merlin-Bot</title>
+    {% comment %} <title><%= htmlWebpackPlugin.options.title %></title> {% endcomment %}
+    <title>Discord Merlin bot</title>
+
 <!--#endregion -->
 </head>
     <body>
+
         <!--#region  body section -->
-        {% comment %} adding navigation bar. {% endcomment %}
-        {% include 'nav.html' %}
+        {% include 'nav.html' %}    {% comment %} adding navigation bar. {% endcomment %}
         {% block content %}
         {% endblock %}
-        <!--#endregion -->
     </body>
 </html>

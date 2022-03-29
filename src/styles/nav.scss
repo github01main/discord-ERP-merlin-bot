@@ -1,31 +1,101 @@
 
 @charset "UTF-8";
 
-/* 멀린 로고 default css */
-.merlin_logo{
-  /* 
-    default logo : effects
-  */
-  width            : 128px;
-  height           : 128px;
-  margin           : 15px;
-  background-color : white;
+/* 1) navigation bar css*/
+.navigation-bar{
+  height           : 80px;
+  width            : 100%;
+  background-color : rgba(21, 21, 21, 1);
+  z-index          : 1;
+  position         : fixed;
+  box-shadow       : 0 1px 1px rgba(0,0,0,0.11), 
+                    0 2px 2px rgba(0,0,0,0.11), 
+                    0 4px 4px rgba(0,0,0,0.11), 
+                    0 8px 8px rgba(0,0,0,0.11), 
+                    0 16px 16px rgba(0,0,0,0.11), 
+                    0 32px 32px rgba(0,0,0,0.11);
+  //search form.
+  form{
+    display        : inline-block;
+    vertical-align : top;
+    margin-right   : 20px;
+    height         : 80px; 
+    line-height    : 80px; 
+
+    //search input section.
+    input{
+      width        : 325px;
+      padding      : 5px;
+      font-size    : 13px;
+      border-radius: 4px;
+      outline      : none;
+    }
+
+    //saerch data send button section.
+    button{
+      width: 50px;
+      padding: 5px;
+      color: #ffffff;
+      background-color: rgba(88,101,242,255);
+      border-radius: 4px;
+      outline: none;
+    }
+  }
+
+  a{
+    color          : white;
+    font-size      : 13px;
+    display        : inline-block;
+    vertical-align : top;
+    padding        : 0px 15px 0px 15px;
+    height         : 80px;        /* if you want it to take the full height of the bar */
+    line-height    : 80px;    /* if you want it vertically middle of the navbar */
+
+    // 2번째 링크부터 hovering 가능하게 설정.
+    &:hover:nth-child(n+2){
+      opacity      : 0.25;
+      transition   : 0.2s ease;
+
+    }
+    // 마지막 로그인 버튼 hovering 시에 애니메이션 작동 및 백그라운드 컬러 적용.
+    &:nth-last-child(1){
+      width: 64px;
+      border-radius: 4px;
+      padding-left: 5px;
+      padding-right: 5px;
+      margin-top: 8px;
+      background-color: rgba(88,101,242,255);
+      box-shadow       : 0 1px 1px rgba(0,0,0,0.11), 
+      0 2px 2px rgba(0,0,0,0.11), 
+      0 4px 4px rgba(0,0,0,0.11), 
+      0 8px 8px rgba(0,0,0,0.11), 
+      0 16px 16px rgba(0,0,0,0.11), 
+      0 32px 32px rgba(0,0,0,0.11);
+    }
+  }
+}
+/* 2) logo css */
+.logo{
+  display          : inline-block;
+  vertical-align   : top;
+  width            : 64px;
+  height           : 64px;
+  margin-top       : 8px;    /* if you want it vertically middle of the navbar. */
   border-radius    :25%;
   box-shadow       : 0 1px 1px rgba(0,0,0,0.11), 
-                     0 2px 2px rgba(0,0,0,0.11), 
-                     0 4px 4px rgba(0,0,0,0.11), 
-                     0 8px 8px rgba(0,0,0,0.11), 
-                     0 16px 16px rgba(0,0,0,0.11), 
-                     0 32px 32px rgba(0,0,0,0.11);
-
+                    0 2px 2px rgba(0,0,0,0.11), 
+                    0 4px 4px rgba(0,0,0,0.11), 
+                    0 8px 8px rgba(0,0,0,0.11), 
+                    0 16px 16px rgba(0,0,0,0.11), 
+                    0 32px 32px rgba(0,0,0,0.11);
   /* default : filtering */
   filter           : none;
   /* default : opacity */
   opacity          : 1;
   /* default : transition */
-  transition       : 0.2s ease;
+  // transition       : 0.2s ease;
 
-    /* 멀린 로고 hover css */
+  /* 멀린 로고 hover css */
   &:hover{
     /* filtering */
     -webkit-filter    : contrast(100%);
@@ -42,4 +112,46 @@
     transform         : rotateZ(-5deg);
     transition        : all 0.2s ease;
   }
+}
+
+.footer{
+  background-color: rgba(21, 21, 21, 1);
+  width: 100%;
+  height: 80px;
+  bottom: 0;
+  z-index: 1;
+  position: fixed;
+}
+
+@media (max-width: 1000px) {
+  .navigation-bar{
+    a{
+      &:nth-child(n+2){
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .footer{width: 100%}
+}
+
+.login0section{
+  border-radius   : 35px;
+  padding         : 8px;
+  margin          : 0px 100px 0px 100px;
+  font-weight     : bolder;
+  height          : 100px;
+  font-variant    : all-small-caps;
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  justify-content: center;
+  box-shadow      : 0 1px 1px rgb(0 0 0 / 11%),
+                    0 2px 2px rgb(0 0 0 / 11%),
+                    0 4px 4px rgb(0 0 0 / 11%),
+                    0 8px 8px rgb(0 0 0 / 11%),
+                    0 16px 16px rgb(0 0 0 / 11%),
+                    0 32px 32px rgb(0 0 0 / 11%);
 }

@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+{% block content %}
+    {% if category.id == 1 %} {# category.id == 인트로 페이지 입니다. #} 
+        {% include 'intro.html' %}
+
+    {% elif category.id == 2 %} {# category.id == 문서 페이지 입니다. #}
+        {% include 'extends/documentation.html' %}
+
+    {% elif category.id == 3 %} {# category.id == 커뮤니티 페이지 입니다. #}
+        {% include 'extends/community.html' %}
+        
+    {% elif category.id == 4 %} {# category.id == 결제 페이지 입니다. #}
+        {% include 'extends/donate.html' %}
+        
+    {% endif %}
+{% endblock %}

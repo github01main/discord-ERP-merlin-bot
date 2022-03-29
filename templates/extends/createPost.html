@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class='article cat0lit'>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_p}} {# 세로 정렬 #}
+        <input type="submit" value="Submit"/>
+    </form>
+</div>
+{% endblock content %}

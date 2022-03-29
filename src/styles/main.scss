@@ -6,9 +6,9 @@
 // font-family: 'Open Sans', sans-serif;
 
 // color variables.
-$primary-color   : #2fa8cc;
+$primary-color   : rgba(88,101,242,255);
 $secondary-color : #f4f4f4;
-$tertiary-color  : #d64141; 
+$tertiary-color  : #d64141;
 $box-shadow      : 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
 
 /* 모든 css에 적용.*/
@@ -16,66 +16,33 @@ $box-shadow      : 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
     margin  : 0;
     padding : 0;
     border  : 0;
+    text-align: center;
+    text-decoration-line: none;
  }
 
  /* body css에 적용.*/
 body {
     background-color : $primary-color;
     font-family      : 'Jua', sans-serif;
-    display          : flex;
-    flex-direction   : column;
-    align-items      : center;
-    justify-content  : center;
-    height           : 100vh;
-    overflow         : hidden;
-    margin           : 0;
-    padding          : 20px;
-}
 
-.container{
-    background-color : $secondary-color;
-    border-radius    : 10px;
-    box-shadow       : $box-shadow;
-    padding          : 50px 20px;
-    text-align       : center;
-    max-width        : 100%;
-    width            : 800px;
-}
-
-h3 {
-    margin           : 0;
-    opacity          : 0.5;
-    letter-spacing   : 2px;
-}
-
-img {
-    width            : 100px;
-    margin-bottom    : 20px;
-}
-
-.joke {
-    font-size        : 30px;
-    letter-spacing   : 1px;
-    line-height      : 40px;
-    margin           : 50px auto;
-    max-width        : 600px;
-}
-
-.btn {
-    background-color : $primary-color;
-    color            : $secondary-color;
-    border           : 0;
-    border-radius    : 10px;
-    box-shadow       : 0 5px 15px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
-    padding          : 14px 40px;
-    font-size        : 16px;
-    cursor           : pointer;
-
-    &:active{ 
-        transform: scale(0.98);
+    &::-webkit-scrollbar{
+        width: 15px;
     }
-
-    &:focus{
-        outline: 0;
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(21, 21, 21, 1);
+        border-radius: 10px;
+        background-clip: padding-box;
+        border: 2px solid transparent;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: #2f3542;
+        box-shadow: inset 0px 0px 5px white;
+    }
+    
+    hr {
+        margin-top       : 20px;
+        margin-bottom    : 20px;
+        height           : 1px;
+        background-color : rgba(21, 21, 21, 1);
     }
 }
