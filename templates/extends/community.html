@@ -33,8 +33,10 @@
                     {{post.topic}}
                     <div class='cat0lit'>{{post.name}}</div>
                         <div id='divided-side-section-right-posted-edit-section'>
+                            {% if request.user == post.host %}
                             <a class='cat0lit' href="{% url 'updatePost' post.id %}">Edit</a>
                             <a class='cat0lit' href="{% url 'deletePost' post.id %}">Delete</a>
+                            {% endif %}
                         </div>
                     <hr>
                 </div>

@@ -23,6 +23,12 @@ urlpatterns = [
     # 7rd login pattern..
     path('category/5/login', views.loginPage, name='login'),
     
-    # 8th contact pattern.
+    # 8rd logout pattern..
+    path('category/5/logout', views.logoutUser, name='logout'),
+    
+    # 9rd register pattern..
+    path('category/5/register', views.registerPage, name='register'),
+    
+    # 10th contact pattern.
     path('contact/', views.contact, name='contact'),
 ]
